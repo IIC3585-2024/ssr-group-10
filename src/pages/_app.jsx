@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { getFirestore } from "@firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
@@ -15,6 +16,7 @@ const firebaseConfig = {
 export default function App({ Component, pageProps }) {
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
+  getFirestore(app);
   const provider = new GoogleAuthProvider();
 
   const [user, setUser] = useState(null);
