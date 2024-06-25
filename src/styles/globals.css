@@ -114,7 +114,6 @@ a {
 
 .navBar {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -126,11 +125,17 @@ a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.loginButton {
+button {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   background-color: #0071ff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie {
@@ -141,4 +146,8 @@ a {
   margin: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p{
+  margin: 1rem;
 }

@@ -3,6 +3,7 @@ import { getFirestore } from "@firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
+import Link from "next/link";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAYbDDiZ1F05AvYwLxvnrAg0r4XxnbRcGI",
@@ -34,14 +35,13 @@ export default function App({ Component, pageProps }) {
   return (
     <div className="container">
       <div className="navBar">
+        <Link href="/">
+          <button>Home</button>
+        </Link>
         {user ? (
-          <button className="loginButton" onClick={() => signOut(auth)}>
-            Sign out
-          </button>
+          <button onClick={() => signOut(auth)}>Sign out</button>
         ) : (
-          <button className="loginButton" onClick={() => signInWithPopup(auth, provider)}>
-            Sign in with Google
-          </button>
+          <button onClick={() => signInWithPopup(auth, provider)}>Sign in with Google</button>
         )}
       </div>
       <Component {...pageProps} />
