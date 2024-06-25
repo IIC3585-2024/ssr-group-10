@@ -105,3 +105,30 @@ a {
     color-scheme: dark;
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    to right,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loginButton {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #0071ff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
